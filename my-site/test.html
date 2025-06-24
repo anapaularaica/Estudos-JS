@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coxinha de Amor: O Segredo de Maria Antônia</title>
 
-    <!--Normalize CSS-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -13,7 +12,6 @@
       referrerpolicy="no-referrer"
     />
 
-    <!--Font Roboto-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -21,30 +19,27 @@
       rel="stylesheet"
     />
 
-    <!--Nosso CSS-->
     <style>
-      /* Configurações gerais */
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #ffffff; /* Off-white */
-        color: #2c2c2c; /* Cinza escuro */
+        background-color: #ffffff; 
+        color: #2c2c2c; 
         margin: 0;
         padding: 0;
         line-height: 1.6;
       }
 
-      /* Estrutura do blog */
+
       .container {
         width: 80%;
         margin: 0 auto;
         padding: 20px;
       }
 
-      /* Títulos e subtítulos */
       h1,
       h2,
       h3 {
-        color: #444; /* Cinza médio */
+        color: #444;
         margin-bottom: 20px;
         font-weight: 600;
       }
@@ -55,9 +50,9 @@
 
       h1 {
         font-size: 2.5rem;
-        color: rgb(255, 255, 255); /* Cor igual ao rodapé */
+        color: rgb(255, 255, 255);
         font-weight: bold;
-        letter-spacing: -1px; /* Para impacto visual */
+        letter-spacing: -1px;
       }
 
       h2 {
@@ -68,28 +63,26 @@
         font-size: 1.5rem;
       }
 
-      /* Parágrafos */
       p {
         margin-bottom: 20px;
         font-size: 1rem;
       }
 
-      /* Links */
+
       a {
-        color: #333; /* Cinza escuro */
+        color: #333;
         text-decoration: none;
         transition: color 0.3s ease;
       }
 
       a:hover {
         text-decoration: underline;
-        color: #555; /* Cinza mais claro no hover */
+        color: #555; 
       }
 
-      /* Rodapé */
       footer {
-        background-color: rgb(194, 9, 9); /* Cor de fundo do rodapé */
-        color: #ffffff; /* Cor do texto do rodapé */
+        background-color: rgb(194, 9, 9);
+        color: #ffffff;
         text-align: center;
         padding: 20px;
         margin-top: 40px;
@@ -100,24 +93,20 @@
         font-size: 0.9rem;
       }
 
-      /* Imagem centralizada */
       .image-center {
         display: block;
         margin: 0 auto 40px auto;
-        max-width: 35%; /* Reduzindo a imagem pela metade */
+        max-width: 35%;
         height: auto;
-        border-radius: 10px; /* Bordas arredondadas para um toque moderno */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+        border-radius: 10px; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       }
 
-      /* Outros elementos opcionais */
       hr {
         border: 0;
-        border-top: 1px solid #e0e0e0; /* Cinza claro */
+        border-top: 1px solid #e0e0e0;
         margin: 40px 0;
       }
-
-      /* Media Queries para dispositivos móveis */
       @media (max-width: 768px) {
         .container {
           width: 90%;
@@ -141,7 +130,7 @@
         }
 
         .image-center {
-          max-width: 70%; /* Imagem maior em dispositivos móveis */
+          max-width: 70%;
         }
       }
     </style>
@@ -225,9 +214,7 @@
       <p>&copy; Todos os direitos reservados, Ana Paula Raica.</p>
     </footer>
 
-    <!-- JavaScript para Ajustes de Responsividade -->
     <script>
-      // Função para ajustar dinamicamente o layout dependendo do tamanho da tela
       function ajustarLayout() {
         const container = document.querySelector(".container");
         const viewportWidth = window.innerWidth;
@@ -241,27 +228,24 @@
         }
       }
 
-      // Função para detectar o tipo de dispositivo e aplicar ajustes específicos
+
       function detectarDispositivo() {
         const userAgent =
           navigator.userAgent || navigator.vendor || window.opera;
 
         if (/android/i.test(userAgent)) {
-          // Ajustes específicos para Android
+
           document.body.style.fontSize = "1rem";
         }
 
         if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-          // Ajustes específicos para iOS
           document.body.style.fontSize = "1rem";
           document.body.style.lineHeight = "1.7";
         }
       }
 
-      // Executa as funções quando a janela é redimensionada
       window.addEventListener("resize", ajustarLayout);
 
-      // Executa as funções ao carregar a página
       window.addEventListener("load", () => {
         ajustarLayout();
         detectarDispositivo();
